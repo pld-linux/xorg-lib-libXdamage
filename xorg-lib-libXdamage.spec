@@ -17,6 +17,7 @@ BuildRequires:	xorg-lib-libXfixes-devel
 BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	libXdamage
 BuildRoot:	%{tmpdir}/libXdamage-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -35,6 +36,7 @@ Group:		X11/Development/Libraries
 Requires:	xorg-lib-libXdamage = %{version}-%{release}
 Requires:	xorg-proto-damageproto-devel
 Requires:	xorg-lib-libXfixes-devel
+Obsoletes:	libXdamage-devel
 
 %description devel
 X Damage extension library.
@@ -54,6 +56,7 @@ Summary:	Static libXdamage libraries
 Summary(pl):	Biblioteki statyczne libXdamage
 Group:		Development/Libraries
 Requires:	xorg-lib-libXdamage-devel = %{version}-%{release}
+Obsoletes:	libXdamage-static
 
 %description static
 X Damage extension library.
