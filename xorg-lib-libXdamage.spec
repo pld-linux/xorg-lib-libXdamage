@@ -16,7 +16,7 @@ BuildRequires:	xorg-lib-libXfixes-devel
 BuildRequires:	xorg-proto-damageproto-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXdamage
-BuildRoot:	%{tmpdir}/libXdamage-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
