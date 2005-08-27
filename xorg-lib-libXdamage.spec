@@ -15,7 +15,7 @@ BuildRequires:	automake
 BuildRequires:	xorg-proto-damageproto-devel
 BuildRequires:	xorg-lib-libXfixes-devel
 BuildRequires:	libtool
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXdamage
 BuildRoot:	%{tmpdir}/libXdamage-%{version}-root-%(id -u -n)
