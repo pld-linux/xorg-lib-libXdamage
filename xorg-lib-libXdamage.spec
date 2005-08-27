@@ -1,5 +1,3 @@
-
-#
 Summary:	X Damage extension library
 Summary(pl):	Biblioteka rozszerzenia X Damage
 Name:		xorg-lib-libXdamage
@@ -12,10 +10,10 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXdamage-%{version}.tar.b
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-proto-damageproto-devel
-BuildRequires:	xorg-lib-libXfixes-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXfixes-devel
+BuildRequires:	xorg-proto-damageproto-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXdamage
 BuildRoot:	%{tmpdir}/libXdamage-%{version}-root-%(id -u -n)
@@ -28,12 +26,11 @@ X Damage extension library.
 %description -l pl
 Biblioteka rozszerzenia X Damage.
 
-
 %package devel
 Summary:	Header files libXdamage development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXdamage
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXdamage = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-damageproto-devel
 Requires:	xorg-lib-libXfixes-devel
 Obsoletes:	libXdamage-devel
@@ -50,12 +47,11 @@ Biblioteka rozszerzenia X Damage.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXdamage.
 
-
 %package static
-Summary:	Static libXdamage libraries
-Summary(pl):	Biblioteki statyczne libXdamage
+Summary:	Static libXdamage library
+Summary(pl):	Biblioteka statyczna libXdamage
 Group:		Development/Libraries
-Requires:	xorg-lib-libXdamage-devel = %{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXdamage-static
 
 %description static
@@ -68,10 +64,8 @@ Biblioteka rozszerzenia X Damage.
 
 Pakiet zawiera statyczn± bibliotekê libXdamage.
 
-
 %prep
 %setup -q -n libXdamage-%{version}
-
 
 %build
 %{__libtoolize}
@@ -95,20 +89,17 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
-%attr(755,root,wheel) %{_libdir}/libXdamage.so.*
-
+%attr(755,root,root) %{_libdir}/libXdamage.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/extensions/*.h
+%attr(755,root,root) %{_libdir}/libXdamage.so
 %{_libdir}/libXdamage.la
-%attr(755,root,wheel) %{_libdir}/libXdamage.so
+%{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xdamage.pc
-
 
 %files static
 %defattr(644,root,root,755)
