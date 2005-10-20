@@ -2,18 +2,18 @@ Summary:	X Damage extension library
 Summary(pl):	Biblioteka rozszerzenia X Damage
 Name:		xorg-lib-libXdamage
 Version:	1.0.1
-Release:	0.03
+Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXdamage-%{version}.tar.bz2
-# Source0-md5:	4ba5a97a1dac93393290fe88b77f9641
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXdamage-%{version}.tar.bz2
+# Source0-md5:	59894385afae5af988084af7db8a8267
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libXfixes-devel
-BuildRequires:	xorg-proto-damageproto-devel
+BuildRequires:	xorg-proto-damageproto-devel >= 1.0
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXdamage
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,8 +29,8 @@ Summary:	Header files libXdamage development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXdamage
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	xorg-proto-damageproto-devel
 Requires:	xorg-lib-libXfixes-devel
+Requires:	xorg-proto-damageproto-devel >= 1.0
 Obsoletes:	libXdamage-devel
 
 %description devel
@@ -89,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog
+%doc AUTHORS COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXdamage.so.*.*.*
 
 %files devel
