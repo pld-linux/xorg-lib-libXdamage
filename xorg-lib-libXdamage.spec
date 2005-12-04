@@ -25,8 +25,8 @@ X Damage extension library.
 Biblioteka rozszerzenia X Damage.
 
 %package devel
-Summary:	Header files libXdamage development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXdamage
+Summary:	Header files for libXdamage library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXdamage
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXfixes-devel
@@ -37,7 +37,7 @@ Obsoletes:	libXdamage-devel
 X Damage extension library.
 
 This package contains the header files needed to develop programs that
-use these libXdamage.
+use libXdamage.
 
 %description devel -l pl
 Biblioteka rozszerzenia X Damage.
