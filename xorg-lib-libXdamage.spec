@@ -5,8 +5,8 @@ Version:	1.0.2.2
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXdamage-%{version}.tar.bz2
-# Source0-md5:	0fc55598c78ed570e0dc7da6b74fa8a3
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXdamage-%{version}.tar.bz2
+# Source0-md5:	d8a367fe34feb3a7a3314137ff3e9c18
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
