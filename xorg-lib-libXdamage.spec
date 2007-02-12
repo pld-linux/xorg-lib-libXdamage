@@ -1,5 +1,5 @@
 Summary:	X Damage extension library
-Summary(pl):	Biblioteka rozszerzenia X Damage
+Summary(pl.UTF-8):   Biblioteka rozszerzenia X Damage
 Name:		xorg-lib-libXdamage
 Version:	1.1
 Release:	1
@@ -21,12 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X Damage extension library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka rozszerzenia X Damage.
 
 %package devel
 Summary:	Header files for libXdamage library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXdamage
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXdamage
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXfixes-devel
@@ -39,15 +39,15 @@ X Damage extension library.
 This package contains the header files needed to develop programs that
 use libXdamage.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka rozszerzenia X Damage.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXdamage.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXdamage.
 
 %package static
 Summary:	Static libXdamage library
-Summary(pl):	Biblioteka statyczna libXdamage
+Summary(pl.UTF-8):   Biblioteka statyczna libXdamage
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXdamage-static
@@ -57,10 +57,10 @@ X Damage extension library.
 
 This package contains the static libXdamage library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka rozszerzenia X Damage.
 
-Pakiet zawiera statyczn± bibliotekê libXdamage.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXdamage.
 
 %prep
 %setup -q -n libXdamage-%{version}
