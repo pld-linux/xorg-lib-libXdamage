@@ -1,5 +1,5 @@
 Summary:	X Damage extension library
-Summary(pl.UTF-8):   Biblioteka rozszerzenia X Damage
+Summary(pl.UTF-8):	Biblioteka rozszerzenia X Damage
 Name:		xorg-lib-libXdamage
 Version:	1.1
 Release:	1
@@ -26,7 +26,7 @@ Biblioteka rozszerzenia X Damage.
 
 %package devel
 Summary:	Header files for libXdamage library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXdamage
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXdamage
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXfixes-devel
@@ -47,7 +47,7 @@ używających biblioteki libXdamage.
 
 %package static
 Summary:	Static libXdamage library
-Summary(pl.UTF-8):   Biblioteka statyczna libXdamage
+Summary(pl.UTF-8):	Biblioteka statyczna libXdamage
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXdamage-static
