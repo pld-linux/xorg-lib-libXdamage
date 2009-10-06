@@ -97,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXdamage.so
 %{_libdir}/libXdamage.la
-%{_includedir}/X11/extensions/*.h
+%{_includedir}/X11/extensions/Xdamage.h
 %{_pkgconfigdir}/xdamage.pc
 
 %files static
