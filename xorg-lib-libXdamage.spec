@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXfixes-devel
 BuildRequires:	xorg-proto-damageproto-devel >= 1.1
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 1.3
 Obsoletes:	libXdamage
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -89,8 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog
+%doc AUTHORS COPYING ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/libXdamage.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXdamage.so.1
 
 %files devel
 %defattr(644,root,root,755)
