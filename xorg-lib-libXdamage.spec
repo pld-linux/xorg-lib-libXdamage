@@ -1,12 +1,12 @@
 Summary:	X Damage extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X Damage
 Name:		xorg-lib-libXdamage
-Version:	1.1.3
+Version:	1.1.4
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXdamage-%{version}.tar.bz2
-# Source0-md5:	44774e1a065158b52f1a0da5100cebec
+# Source0-md5:	0cf292de2a9fa2e9a939aefde68fd34f
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXfixes-devel
 BuildRequires:	xorg-proto-damageproto-devel >= 1.1
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-util-util-macros >= 1.8
 Obsoletes:	libXdamage
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
