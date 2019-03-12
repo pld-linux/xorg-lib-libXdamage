@@ -1,19 +1,22 @@
 Summary:	X Damage extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X Damage
 Name:		xorg-lib-libXdamage
-Version:	1.1.4
-Release:	2
+Version:	1.1.5
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXdamage-%{version}.tar.bz2
-# Source0-md5:	0cf292de2a9fa2e9a939aefde68fd34f
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXdamage-%{version}.tar.bz2
+# Source0-md5:	e3f554267a7a04b042dc1f6352bd6d99
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXfixes-devel
 BuildRequires:	xorg-proto-damageproto-devel >= 1.1
+BuildRequires:	xorg-proto-fixesproto-devel
+BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
 Obsoletes:	libXdamage
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,6 +32,7 @@ Summary:	Header files for libXdamage library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXdamage
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	xorg-lib-libX11-devel
 Requires:	xorg-lib-libXfixes-devel
 Requires:	xorg-proto-damageproto-devel >= 1.1
 Obsoletes:	libXdamage-devel
@@ -89,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog NEWS README
+%doc AUTHORS COPYING ChangeLog NEWS README.md
 %attr(755,root,root) %{_libdir}/libXdamage.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXdamage.so.1
 
